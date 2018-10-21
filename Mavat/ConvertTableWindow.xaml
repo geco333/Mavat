@@ -1,0 +1,80 @@
+﻿<Window x:Class="Mavat.ConvertTableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mavat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="600">
+
+    <Window.Resources>
+        <XmlDataProvider
+                    Source="../../ConvertTable.xml"
+                    x:Key="convertXml"/>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <!--From-->
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="From" FontSize="20" HorizontalAlignment="Center"/>
+
+                <ListBox>
+                    <ListBox.ItemsSource>
+                        <Binding 
+                    Source="{StaticResource convertXml}"
+                    XPath="Root/Blocks/Block/From"/>
+                    </ListBox.ItemsSource>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBoxItem FontSize="18">
+                                <Binding/>
+                            </ListBoxItem>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+            <!--To-->
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="To" FontSize="20" HorizontalAlignment="Center"/>
+
+                <ListBox>
+                    <ListBox.ItemsSource>
+                        <Binding 
+                    Source="{StaticResource convertXml}"
+                    XPath="Root/Blocks/Block/To"/>
+                    </ListBox.ItemsSource>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBoxItem FontSize="18">
+                                <Binding/>
+                            </ListBoxItem>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+            <!--Path-->
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Path" FontSize="20" HorizontalAlignment="Center"/>
+
+                <ListBox>
+                    <ListBox.ItemsSource>
+                        <Binding 
+                    Source="{StaticResource convertXml}"
+                    XPath="Root/Blocks/Block/Path"/>
+                    </ListBox.ItemsSource>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBoxItem FontSize="18">
+                                <Binding/>
+                            </ListBoxItem>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Root>
+  <Blocks>
+    <Block>
+      <From>TRP0670</From>
+      <To>M1501</To>
+      <Path>C:\Users\Geco\Desktop\Mavat\MBlocks\M1501.dwg</Path>
+    </Block>
+    <Block>
+      <From>TRP0270</From>
+      <To>M3903</To>
+      <Path>C:\Users\Geco\Desktop\Mavat\MBlocks\M3903.dwg</Path>
+    </Block>
+  </Blocks>
+
+  <Layers>
+    <Layer>
+      <From>1BATIM</From>
+      <To>M2202</To>
+    </Layer>
+  </Layers>
+</Root>
